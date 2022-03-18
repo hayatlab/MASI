@@ -7,7 +7,7 @@ Manuscript: Fast model-free standardization and integration via MASI for single-
 ### 1. Brief description
 MASI utilizes robust marker idenfication to identify marker genes from reference data and transfers cell-type labels to target data through MACA.
 
-![alt text](https://github.com/ImXman/MASI/blob/main/MASI/Figure%201.jpg?raw=true)
+![alt text](https://github.com/hayatlab/MASI/blob/main/MASI/Figure%201.jpg?raw=true)
 
 ### 2. Install requirement packages
     pip install scanpy cosg rpy2 sccaf
