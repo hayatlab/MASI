@@ -11,7 +11,7 @@ import anndata
 import collections
 import numpy as np
 import pandas as pd
-import cosg as cosg
+#import cosg as cosg
 import scanpy as sc
 import multiprocessing
 
@@ -27,7 +27,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.feature_extraction.text import TfidfTransformer
 
-from SCCAF import SCCAF_optimize_all
+#from SCCAF import SCCAF_optimize_all
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -657,30 +657,30 @@ def metacells(source_data=None,res=10):
 ##-----------------------------------------------------------------------------
 ##Use SCCAF to identify subtypes, when reference data has less annotation 
 ##resolution than target data (Miao et al., Nature Methods, 2020)
-def subtype_identification(ad=None,cell_type_score=None):
+#def subtype_identification(ad=None,cell_type_score=None):
     
-    ad.obsm['X_pca']=cell_type_score.values
-    sc.pp.neighbors(ad, use_rep="X_pca", n_neighbors=5,metric='cosine')
+#    ad.obsm['X_pca']=cell_type_score.values
+#    sc.pp.neighbors(ad, use_rep="X_pca", n_neighbors=5,metric='cosine')
     
-    all_anns = list(set(ad.obs['Annotation'].values.tolist()))
-    ad.obs['newAnnotation']=" "
-    newAnnotation = np.array(ad.obs['newAnnotation'])
-    for a in all_anns:
-        ad_sccaf = ad[ad.obs['Annotation']==a]
-        sc.tl.leiden(ad_sccaf, resolution=0.2, key_added='L2_Round0')
-        SCCAF_optimize_all(min_acc=0.9, ad=ad_sccaf, basis ='umap', use='pca',
-                           prefix = 'L2')
-        subcluster = np.array(ad_sccaf.obs['L2_result'].values.tolist())
-        subid = pd.DataFrame.from_dict(collections.Counter(ad_sccaf.obs['L2_result'].values.tolist()),
-                                       orient='index')
-        subid = subid[subid[0]<=15]
-        for i in subid.index.tolist():
-            subcluster[subcluster==i]=0
-        newAnnotation[ad.obs['Annotation']==a]=subcluster#ad_sccaf.obs['L2_result'].values.tolist()
+#    all_anns = list(set(ad.obs['Annotation'].values.tolist()))
+#    ad.obs['newAnnotation']=" "
+#    newAnnotation = np.array(ad.obs['newAnnotation'])
+#    for a in all_anns:
+#        ad_sccaf = ad[ad.obs['Annotation']==a]
+#        sc.tl.leiden(ad_sccaf, resolution=0.2, key_added='L2_Round0')
+#        SCCAF_optimize_all(min_acc=0.9, ad=ad_sccaf, basis ='umap', use='pca',
+#                           prefix = 'L2')
+#        subcluster = np.array(ad_sccaf.obs['L2_result'].values.tolist())
+#        subid = pd.DataFrame.from_dict(collections.Counter(ad_sccaf.obs['L2_result'].values.tolist()),
+#                                       orient='index')
+#        subid = subid[subid[0]<=15]
+#        for i in subid.index.tolist():
+#            subcluster[subcluster==i]=0
+#        newAnnotation[ad.obs['Annotation']==a]=subcluster#ad_sccaf.obs['L2_result'].values.tolist()
         
-    subtypes = []
-    for i in range(len(newAnnotation)):
-        subtypes.append(ad.obs['Annotation'].values[i]+"-"+newAnnotation[i])
-    ad.obs['newAnnotation']=subtypes
+#    subtypes = []
+#    for i in range(len(newAnnotation)):
+#        subtypes.append(ad.obs['Annotation'].values[i]+"-"+newAnnotation[i])
+#    ad.obs['newAnnotation']=subtypes
     
-    return ad
+#    return ad
