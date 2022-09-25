@@ -8,6 +8,9 @@
 | **Zebrafish embryo** | zebrafish_embryo_24hpf_wagner_markers_author.csv | 72 refined subtypes in zebrafish embryo at 24hpf  | Wagner et al., Science 2018
 | **Cross-tissue immune cell atlas** | encyclopedia_table.xlsx | immune cell types across human tissues  | Conde et al., bioRxiv 2021
 | **ScTypeDB** | ScTypeDB_full.xlsx | ScTypeDB, a combined PanglaoDB and CellMarker database  | Ianevski et al., Nature Communications 2022
+| **singleCellBase human** | singleCellBase_human_cell_markers_20220629.txt | singleCellBase, a manualy curated cell marker database  | Meng et al., 2022
+| **singleCellBase mouse** | singleCellBase_mouse_cell_markers_20220629.txt | singleCellBase, a manualy curated cell marker database  | Meng et al., 2022
+
 
   **Note 1** : marker collections in the 1st table were collected from publications
 
