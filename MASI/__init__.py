@@ -655,6 +655,23 @@ def metacells(source_data=None,res=10):
     return metacells
 
 ##-----------------------------------------------------------------------------
+##Assign certainty score to each cell
+##Certainty score is designed by 1- D1/D_last
+##D1 is the distance to the 1st closest cell type centroid
+##D_last is the distance to the least close cell type centroid
+##if certainty score < 0.6, the cell would be assign as "unassigned"
+def cal_centainty(ad):
+    reference = ad[ad.obs['source']=='reference']
+    ref_centroid = pd.DataFrame(reference.obsm['X_score'])
+    ref_centroid['cell_type']=reference.obs['cell_type'].values
+    ref_centroid = ref_centroid.groupby('cell_type').mean()
+    
+    nbrs = NearestNeighbors(n_neighbors=ref_centroid.shape[1], algorithm='ball_tree').fit(ref_centroid)
+    distances, _ = nbrs.kneighbors(ad.obsm['X_score'])
+    certainty = 1- distances[:,0]/distances[:,ref_centroid.shape[1]-1]
+    return certainty
+
+##-----------------------------------------------------------------------------
 ##Use SCCAF to identify subtypes, when reference data has less annotation 
 ##resolution than target data (Miao et al., Nature Methods, 2020)
 #def subtype_identification(ad=None,cell_type_score=None):
