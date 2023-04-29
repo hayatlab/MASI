@@ -47,7 +47,7 @@ Processed data can be found at https://figshare.com/articles/dataset/Fast_model-
     3. Butler, Andrew, et al. "Integrating single-cell transcriptomic data across different conditions, technologies, and species." Nature biotechnology (2018).
 
 ### 6. Citation
-Xu et al. "Fast model-free standardization and integration of single-cell transcriptomics data". <a href="https://www.biorxiv.org/content/10.1101/2022.03.28.486110v1">bioRxiv</a>
+Xu et al. "MASI enables fast model-free standardization and integration of single-cell transcriptomics data". <a href="https://www.nature.com/articles/s42003-023-04820-3">Communications Biology</a>
 
 ## update 05/18/2022
 We are working on a major update of MASI to integrate single-cell multi-omics data.
