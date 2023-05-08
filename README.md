@@ -49,5 +49,7 @@ Processed data can be found at https://figshare.com/articles/dataset/Fast_model-
 ### 6. Citation
 Xu et al. "MASI enables fast model-free standardization and integration of single-cell transcriptomics data". <a href="https://www.nature.com/articles/s42003-023-04820-3">Communications Biology</a>
 
-## update 05/18/2022
-We are working on a major update of MASI to integrate single-cell multi-omics data.
+### 7. Integration of multimodal single-cell and spatial data
+A major update of MASI is availale at https://github.com/hayatlab/MASIv2
+
+MASIv2 integrates large-scale multimodal single-cell and spatial data with few computational resources.
