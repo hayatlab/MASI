@@ -52,4 +52,4 @@ Xu et al. "MASI enables fast model-free standardization and integration of singl
 ### 7. Integration of multimodal single-cell and spatial data
 A major update of MASI is availale at https://github.com/hayatlab/MASIv2
 
-MASIv2 integrates large-scale multimodal single-cell and spatial data with few computational resources.
+MASIv2 integrates large-scale multimodal single-cell and spatial data with few computational resources. <a href="https://www.biorxiv.org/content/10.1101/2023.05.15.540808v1">bioRxiv</a>
