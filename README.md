@@ -40,16 +40,10 @@ Please see tutorials at https://github.com/hayatlab/MASI/tree/main/tutorial
 
 Processed data can be found at https://figshare.com/articles/dataset/Fast_model-free_integration_and_transfer_learning_via_MASI_for_single-cell_expression_data/18866264.
     
-
-### 5. References
-    1. Xu, Y., et al. "MACA: Marker-based automatic cell-type annotation for single cell expression data." Bioinformatics (2021).
-    2. Wolf, F. Alexander, Philipp Angerer, and Fabian J. Theis. "SCANPY: large-scale single-cell gene expression data analysis." Genome biology (2018).
-    3. Butler, Andrew, et al. "Integrating single-cell transcriptomic data across different conditions, technologies, and species." Nature biotechnology (2018).
-
-### 6. Citation
+### 5. Citation
 Xu et al. "MASI enables fast model-free standardization and integration of single-cell transcriptomics data". <a href="https://www.nature.com/articles/s42003-023-04820-3">Communications Biology</a>
 
-### 7. Integration of multimodal single-cell and spatial data
+### 6. Integration of multimodal single-cell and spatial data
 A major update of MASI is availale at https://github.com/hayatlab/MASIv2
 
 MASIv2 integrates large-scale multimodal single-cell and spatial data with few computational resources. <a href="https://www.biorxiv.org/content/10.1101/2023.05.15.540808v1">bioRxiv</a>
