@@ -11,7 +11,7 @@ import anndata
 import collections
 import numpy as np
 import pandas as pd
-#import cosg as cosg
+import cosg as cosg
 import scanpy as sc
 import multiprocessing
 
