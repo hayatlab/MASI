@@ -10,8 +10,9 @@ MASI utilizes robust marker idenfication to identify marker genes from reference
 ![alt text](https://github.com/hayatlab/MASI/blob/main/MASI/Figure%201.jpg?raw=true)
 
 ### 2. Install requirement packages
-    pip install scanpy cosg rpy2 sccaf
-    pip install fa2##install if doing integrative lineage analysis
+    pip install scanpy cosg rpy2 
+    pip install sccaf ##optional
+    pip install fa2 ##install if doing integrative lineage analysis
     
     ##install Seurat and RobustRankAggreg separately in R
     install.packages('Seurat')
