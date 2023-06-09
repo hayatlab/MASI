@@ -21,6 +21,8 @@ MASI utilizes robust marker idenfication to identify marker genes from reference
     ##We noticed adding BatchNorm1D as data transformation can further remove batch effects 
     ##but may sacrifice discriminative power for cell-type identification.
     
+    ##Then git clone MASI to the working directory for use
+    
 ### 3. Usage
     import MASI as masi
     
