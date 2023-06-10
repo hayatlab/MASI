@@ -87,7 +87,7 @@ def gene2cell(ad=None, cell_markers=None,use_weight=False,thresh=0.25,
     ##TF-IDF transformation
     X = ad.X.copy()
     if scipy.sparse.issparse(X):
-        X = X.todense()
+       X = np.asarray(X.todense())
     
     if if_tfidf:
         tf_transformer = TfidfTransformer(use_idf=True).fit(X)
@@ -561,7 +561,7 @@ def marker_identification_LC(source_data=None,num_sub_cells=500,if_metacells=Fal
             
             X = subsample.X.copy()
             if scipy.sparse.issparse(X):
-                X = X.todense()
+                X = np.asarray(X.todense())
 
             exprs = pd.DataFrame(X)
             exprs.columns = subsample.var.index.tolist()
