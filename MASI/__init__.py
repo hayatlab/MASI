@@ -110,7 +110,8 @@ def gene2cell(ad=None, cell_markers=None,use_weight=False,thresh=0.25,
                 marker_index += 1
                 if i in ad.var.index:
                     if if_thresh:
-                        expr95 = np.percentile(X[:,ad.var.index == i],95)
+                        x = np.asarray(X[:, ad.var.index == i])
+                        expr95 = np.percentile(x, 95)
                         thresh = thresh * expr95
                         l = np.array(X[:,ad.var.index == i])
                         l[X[:,ad.var.index == i]<=thresh]=0
@@ -133,7 +134,8 @@ def gene2cell(ad=None, cell_markers=None,use_weight=False,thresh=0.25,
             n = np.zeros((X.shape[0]))
             for i in v:
                 if i in ad.var.index:
-                    expr95 = np.percentile(X[:,ad.var.index == i],95)
+                    x = np.asarray(X[:, ad.var.index == i])
+                    expr95 = np.percentile(x, 95)
                     thresh = thresh * expr95
                     l = np.array(X[:,ad.var.index == i])
                     l[X[:,ad.var.index == i]<=thresh]=0
